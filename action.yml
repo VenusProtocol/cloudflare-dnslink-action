@@ -1,0 +1,24 @@
+name: 'Venus Cloudflare DNSLink GitHub Action'
+author: 'Venus Protocol'
+description: 'A GitHub Action to update the DNSLink TXT record of a DNS using Cloudflare'
+inputs:
+  cid:
+    description: 'CID of the content to pin'
+    required: true
+  purge:
+    description: 'Whether to purge the cache after updating the DNSLink record or not'
+    type: 'boolean'
+    default: 'false'
+    required: false
+  cloudflareApiToken:
+    description: 'Cloudflare API key. Permissions needed: Zone - Cache Purge - Purge, Zone - Web3 Hostnames - Edit. Visit https://developers.cloudflare.com/fundamentals/api/get-started/create-token'
+    required: true
+  cloudflareZoneId: 
+    description: 'Cloudflare zone ID. Visit https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids'
+    required: true
+  cloudflareHostname: 
+    description: 'Cloudflare hostname. e.g.: app.venus.io'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
