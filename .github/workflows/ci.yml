@@ -49,6 +49,6 @@ jobs:
         with:
           cid: QmXWKHN72K3bLnJPt4KhV9qVBUvuptwrD7WK7xjB85ewbk
           purge: true
-          cloudflareHostname: app.abhfe765123chd9qw.com # TODO: update with dummy Venus hostname
+          cloudflareHostname: cloudflare-dnslink-action.venus.io
           cloudflareApiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           cloudflareZoneId: ${{ secrets.CLOUDFLARE_ZONE_ID }}
